@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply font-['Poppins'] transition-colors duration-200;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply leading-normal;
+  }
+
+  .glassmorphism {
+    @apply bg-white/10 backdrop-blur-md dark:bg-black-200/20 border border-white/20 shadow-glass;
+  }
+
+  .glassmorphism-card {
+    @apply bg-white/30 dark:bg-black-100/30 backdrop-blur-lg rounded-xl border border-white/20 dark:border-white/10 shadow-glass;
+  }
+
+  .section-heading {
+    @apply font-bold text-3xl sm:text-4xl md:text-5xl text-black dark:text-white mb-8;
+  }
+  
+  .section-subheading {
+    @apply font-semibold text-xl sm:text-2xl text-gray-700 dark:text-secondary mb-4;
+  }
+
+  .btn {
+    @apply px-6 py-2.5 font-medium text-white transition-all rounded-full flex items-center justify-center gap-2;
+  }
+
+  .btn-primary {
+    @apply bg-accent hover:bg-accent/80 shadow-lg shadow-accent/30;
+  }
+
+  .nav-link {
+    @apply text-gray-800 dark:text-gray-300 hover:text-accent dark:hover:text-accent font-medium cursor-pointer;
+  }
+}
+
+.hero-gradient {
+  background: linear-gradient(90deg, rgba(255, 69, 0, 0.15) 0%, rgba(255, 69, 0, 0) 100%);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+} 
